@@ -26,9 +26,9 @@
                     <div class="dot"></div>
                     <div class="dot"></div>
                 </a>
-                <a href="#">About</a>
-                <a href="#">Whatever</a>
-                <a href="#">Contact</a>
+                <a href="#About">About</a>
+                <a href="#Whatever">Whatever</a>
+                <a href="#Contact">Contact</a>
               
             </div>
         </nav>
@@ -64,7 +64,7 @@
 <section>
 
 <div class="container reveal">
-    <h1>Hello this is what I made</h1> 
+    <h1 id="About">Hello this is what I made</h1> 
 
     <hr>
     
@@ -72,7 +72,7 @@
         
         <div class="txtcard">
            
-            <h3>title</h3>
+            <h3 >title</h3>
             <p style="color: rgb(241, 255, 214);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum a ipsam cupiditate praesentium! Aut dolorum, optio asperiores culpa sed sit cum laboriosam deleniti delectus! Vitae at delectus ipsam nesciunt aspernatur quis quas ratione doloribus reiciendis animi ipsum aperiam eum nihil nostrum voluptatum, maxime quos culpa fugiat praesentium corporis beatae?</p>
         </div>
         <div class="txtcard1">
@@ -88,7 +88,7 @@
 <section>
 
     <div class="container reveal">
-        <h2>How you doing?</h2>
+        <h2 id="Whatever">How you doing?</h2>
         <hr>
         <div class="texti">
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam itaque, reiciendis, nihil et cupiditate sapiente vitae consequuntur aliquid possimus nisi quod! Pariatur fuga dignissimos consequuntur illo aliquam sit modi mollitia ipsum! Repudiandae libero dolor eius facilis laudantium perferendis, voluptates maiores eveniet? Ex necessitatibus odio doloribus quasi voluptates recusandae numquam?
@@ -109,7 +109,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsa possi
     <section>
 
         <div class="container reveal">
-            <h1>Whatever you want..</h1>
+            <h1 id="Contact">Whatever you want..</h1>
             <hr>
             <div class="cards">
                 <div class="txtcard">
@@ -121,6 +121,7 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsa possi
         </section>
 
 <footer><h6></h6></footer>
+<button class="up" onclick="scrollToTop()">Up</button>
 
     <script type="text/javascript">
 
@@ -196,6 +197,21 @@ const typeWriter = setInterval(() => {
     }
 
 }, 200);
+
+///BACK TO TOP
+window.onscroll = function() {
+            const button = document.querySelector('.up');
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block";
+            } else {
+                button.style.display = "none";
+            }
+        };
+
+        // Vieritä sivu alkuun
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
 
 </script
 
