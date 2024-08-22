@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');  
+
+*{
+    font-family: 'urbanist', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: rgb(182, 255, 156);
+}
+
+body {
+
+    background-color: #000000;
+    color: rgb(182, 255, 156)
+
+}
+
+/* NAVIGAATIO */
+
+.logo h1{
+    position: absolute;
+    font-size: 35px;
+    margin: 20px;
+    font-family: 'monoton',cursive;
+}
+
+.topnav {
+    float: right;
+    position: relative;
+}
+
+.topnav a {
+    font-size: 25px;
+    text-decoration: none;
+    display: none; 
+}
+
+.topnav a.close-btn {
+    display: none; 
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.topnav a:hover, .topnav a.active {
+    color: #fff;
+}
+
+.topnav a.icon {
+    margin: 30px;
+    float: right;
+    display: block;
+    width: auto;
+}
+
+.dot {
+    font-family: 'monoton', cursive;
+    background-color: rgb(182, 255, 156);
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    margin: 1px;
+    float: left;
+}
+
+
+
+.topnav.responsive {
+    display: inline-block;
+    width: 300px;
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    
+}
+
+.topnav.responsive a {
+    display: block; 
+    text-align: left;
+    text-decoration: none;
+    padding: 20px;
+}
+
+.topnav.responsive .close-btn {
+    display: block; 
+}
+
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0px;
+    margin: 10px;
+    display: block;
+}
+
+.close-btn {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #9bec38;
+}
+
+
+/* TOPPI*/
+
+
+.top{
+    height: 80vh;
+}
+
+h3{
+    font-family: 'monoton',cursive;
+    font-size: 34px;
+}
+
+section{
+    position: relative;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+
+section:nth-child(1){
+    color: rgb(182, 255, 156);
+}
+
+
+section:nth-child(2){
+    color: rgb(182, 255, 156);
+background-color: black;
+
+}
+
+section:nth-child(3){ 
+    color: rgb(182, 255, 156);
+
+}
+
+section:nth-child(4){
+    color: rgb(182, 255, 156);
+    background-color: rgb(0, 0, 0);
+}
+
+
+section .container{
+    margin: 100px;
+}
+
+section h1{
+    font-size: 60px;
+}
+
+section h2{
+    font-size: 80px;
+    text-align: right;
+
+}
+
+section .cards{
+    display: flex;
+    max-width: 1400px;
+    font-family: 'urbanist', sans-serif;
+    padding: 70px;
+}
+
+section .cards .txtcard{
+    background-image: url(./kuvat/Leaf.jpg);
+    background-color: rgb(85, 104, 75, 0.2);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgba(164, 255, 114, 0.2);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+section .cards .txtcard:hover{
+    transform: scale(1.3); 
+    box-shadow: 0 10px 14px rgba(57, 255, 27, 0.2);
+    z-index: 100;
+    
+}
+
+
+
+section .cards .txtcard1{
+    background-image: url(./kuvat/Leaf.jpg);
+    background-color: rgb(85, 104, 75, 0.2);
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgba(164, 255, 114, 0.2);
+    transform: translate(30px, 50px);
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section .cards .txtcard1:hover{
+    transform: scale(1.2); 
+    box-shadow: 0 10px 14px rgba(57, 255, 27, 0.2);
+    
+}
+
+.reveal{
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: all 2s ease;
+}
+
+.reveal.active{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+
+
+.loading-box{
+    margin-top: 350px;
+    width: 10%;
+    position: absolute;
+    margin-left: 45%;
+    text-align: center;
+    font-size: 25px;
+    animation: remove 18s;
+    opacity: 0;
+}
+
+
+.top-photos{
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: nowrap;
+    margin-top: 5%;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    z-index: 1;
+    gap: 20px;
+    
+}
+
+.top-photos img{
+    width: 450px;
+    height: auto;
+    opacity: 0; 
+    animation: revealAndFade 4s ease forwards;
+    margin-right: 30px;
+    transition: opacity 2s ease-out;
+}
+
+.top-photos img:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.top-photos img:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.top-photos img:nth-child(3) {
+    animation-delay: 1s;
+}
+
+.top.hidden {
+    opacity: 0; 
+}
+.photo-gallery img:hover {
+    transform: scale(1.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+section{
+    margin-top: 20%;
+ 
+}
+
+
+/* FLEEEX*/
+
+@media (max-width: 1200px) {
+
+
+    .top-photos {
+        width: 90%; 
+        margin-left: 5%;
+        margin-top: 15%;
+        overflow: hidden;
+    }
+
+    .top-photos img {
+        height: 500px; 
+    }
+    section{
+        margin-top: 30%;
+  
+    }
+    
+
+}
+
+@media (max-width: 900px){
+    sesction h1{
+        font-size: 40px;
+    }
+
+    section .cards{
+        flex-direction: column;
+
+    }
+    
+    section .cards .txtcard{
+        background-color: rgb(85, 104, 75, 0.2);
+        border: 1px solid rgba(164, 255, 114, 0.2);
+        border-radius: 15px;
+        min-width: 300px !important;
+    }
+
+    section{
+        margin-top: 30%;
+  
+    }
+    
+    .top-photos{
+        margin-top: 20%;
+    }
+    .loading-box{
+        margin-top: 30%;
+    }
+}
+    
+    section .cards .txtcard1{
+        background-color: rgb(85, 104, 75, 0.2);
+
+        border: 1px solid rgba(164, 255, 114, 0.2);
+        border-radius: 15px;
+
+
+
+    }
+
+
+@media (max-width: 680px) {
+    .top-photos img {
+        overflow: hidden;
+    }
+
+
+.top-photos{
+    margin-top: 20%;
+}
+
+    .top{
+        margin-top: 20%;
+        height: 100dvh;
+    }
+    
+    h3{
+        font-family: 'monoton',cursive;
+
+    }
+
+    hr{
+        display: none;
+    }
+
+    h1{
+        margin-top: 30%;
+    }
+    
+    section{
+        margin-top: 40%;
+  
+    }
+
+
+   .cards {
+        margin-bottom: 60%;
+    }
+    
+    .logo h1{
+        opacity: 0;
+        pointer-events: none;
+    }
+
+    .topnav {
+        opacity: 0; 
+        pointer-events: none;
+    }
+    
+    
+    .photo-gallery img{
+       margin-bottom: 50px;
+
+
+    }
+    .photo-gallery{
+        flex-direction: column;
+        
+    }
+}
+
+
+
+
+
+@media (max-width: 680px) {
+
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .top{
+        height: 100vh;
+    }
+.cards{
+    margin-bottom: 60%;
+    }
+    
+    section{
+        margin-top: 50%;
+}
+
+    .top-photos img {
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 15px;  
+        padding: 20px;
+    }
+    .topnav {
+        opacity: 0; 
+        pointer-events: none;
+    }
+    
+
+   .top-photos{
+        margin-top: 10%;
+        flex-direction: column;
+    }
+
+
+    .logo h1{
+        position: absolute;
+        font-size: 35px;
+        margin: 20px;
+        font-family: 'monoton',cursive;
+        opacity: 0;
+        pointer-events: none;
+    }
+    section{
+        height: dvh;
+        margin-top: 80%;
+  
+    }
+
+    .container .reveal{
+        margin-top: 30%;
+        margin-bottom: 40%;
+    }
+    
+h2{
+    padding: 60px;
+
+}
+
+.title{
+    overflow-x: hidden;
+}
+
+
+
+}
+
+    /* TITLEEE */
+
+
+.title h1{
+    font-size: 80px;
+    font-weight: bold;
+}
+
+
+.title {
+   
+    text-align: center;
+    margin-top: 300px;
+    position: absolute;
+    width: 80%;
+    margin-left: 10%;
+    animation: showTitle 3s forwards;
+    animation-delay: 3.5s;
+    opacity: 0;
+  
+}
+
+
+
+.loading-box{
+    margin-top: 350px;
+    width: 10%;
+    position: absolute;
+    margin-left: 45%;
+    text-align: center;
+    font-size: 25px;
+    animation: remove 18s;
+    opacity: 0;
+}
+
+.title h1 {
+    font-size: 100px;
+    font-weight: bold;
+    color: white;
+}
+
+.subtitle{
+    font-size: 25px;
+    animation: blink 1.5s infinite ease-out;
+    opacity: 1;
+}
+
+
+@keyframes showTitle {
+    0% {
+
+        opacity: 0;
+        transform: translatey(-40px);
+    }
+
+
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        letter-spacing: 15px;
+    }
+}
+
+
+
+@keyframes remove {
+
+0%{
+    opacity: 0;
+
+}
+1%{
+    opacity: 1;
+}
+15%{
+    opacity: 1;
+    
+}
+16%{
+    opacity: 0;
+}
+
+}
+
+
+
+@keyframes revealAndFade {
+    0% {
+        opacity: 0;
+        transform: translatey(-20px); /* Aloitus hieman alhaalta */
+    }
+    30% {
+        opacity: 1;
+        transform: translateY(0); /* Nousee alkuperäiseen paikkaan */
+    }
+
+    70% {
+        opacity: 1;
+        transform: translateY(0); /* Pysyy paikallaan hetken aikaa */
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(-20px); /* Haihtuu ja nousee hieman ylöspäin */
+
+    }
+    
+    100% {
+        opacity: 0.1;
+        transform: translateY(0); /* Haihtuu ja nousee hieman ylöspäin */
+        
+    }
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* TITLEEEE */
+
+hr{
+    width: 80%;
+    margin: 20px auto;
+    border: none;
+    border-top: 1px solid rgb(97, 171, 80);
+    box-shadow: 10px 5px 15px rgba(255, 230, 0, 0.9);
+}
+
+hr.short{
+    width: 40%;
+    margin: 80px auto;
+    border: none;
+    border-top: 1px solid rgb(97, 171, 80);
+    box-shadow: 10px 5px 15px rgba(255, 230, 0, 0.9); 
+
+}
+
+/* CONTENTTIIII */
+
+
+section .image img{
+    width: 250px;
+    height: auto;
+    position: relative;
+    border-radius: 15px;
+    transform: translate(-30px, 20px);
+
+}
+
+.texti {
+   
+    width: 100%;
+    max-width: 800px; 
+    margin: 50px auto; 
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 0 20px;
+    text-align: center;
+    
+}
+
+p {
+    letter-spacing: 1.5px;
+}
+
+.photo-gallery {
+    display: flex;
+    justify-content: center; 
+    gap: 20%; 
+    margin-top: 50px;
+}
+
+
+.photo-gallery img {
+    height: 300px;
+    max-width: 100%; 
+    border-radius: 8px; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 10px 1px 25px rgba(57, 255, 27, 0.2);
+}
+
+footer{
+    padding: 20px;
+    text-align: center;
+}
+
+h6 {
+    font-family: 'urbanist', arial, helvetica, sans-serif;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(20, 253, 206, 0.5), 0 0 40px rgba(20, 253, 206, 0.3), 0 0 60px rgba(20, 253, 206, 0.2);
+    
+}
