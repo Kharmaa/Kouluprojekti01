@@ -11,7 +11,8 @@
 body {
 
     background-color: #000000;
-    color: rgb(182, 255, 156)
+    color: rgb(182, 255, 156);
+    overflow-x: hidden;
 
 }
 
@@ -416,7 +417,7 @@ section{
         margin-bottom: 60%;
     }
     
-    .logo h1{
+    /*.logo h1{
         opacity: 0;
         pointer-events: none;
     }
@@ -437,17 +438,14 @@ section{
         
     }
 }
+*/
 
-
-
+}
 
 
 @media (max-width: 680px) {
 
 
-    body{
-        overflow-x: hidden;
-    }
 
     .top{
         height: 100vh;
@@ -466,16 +464,18 @@ section{
         overflow: hidden;
         border-radius: 15px;  
         padding: 20px;
+        opacity: 0;
     }
-    .topnav {
+   /* .topnav {
         opacity: 0; 
         pointer-events: none;
     }
-    
+    */
 
    .top-photos{
         margin-top: 10%;
         flex-direction: column;
+        opacity: 0;
     }
 
 
@@ -502,11 +502,6 @@ h2{
     padding: 60px;
 
 }
-
-.title{
-    overflow-x: hidden;
-}
-
 
 
 }

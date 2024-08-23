@@ -32,11 +32,10 @@
               
             </div>
         </nav>
-    
-        <!--Navi loppuu-->
 
      <!--Top alkaa-->
      <div class="top">
+
         <div class="loading-box">
             <div class="loading">loading</div>%
             <div class="counter">100</div>
@@ -139,7 +138,7 @@ function DisplayMenu() {
         }
       }
 
-///SCROLLL REVEAL
+///SCROLLLREVEAL
 
         window.addEventListener('scroll', reveal);
 
@@ -166,7 +165,7 @@ const scrollThreshold = 300;
 let scrollPosition = 0;
 
 function handleScroll() {
-    const subtitleElement = document.querySelector('');
+    const subtitleElement = document.querySelector('.subtitle');
     const currentScroll = window.scrollY;
 
     if (currentScroll > scrollPosition && currentScroll > scrollThreshold) {
