@@ -9,7 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
     <!--END-->
-
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>BLACK and GREEN</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -49,7 +49,7 @@
         </div>
         <center>
             <div class="title">
-                <h1>Welcome to the Jungle</h1>
+                <h1>Welcome</h1>
                 <div class="subtitle">
                     SCROLL DOWN <br>
                     &#x2193;
@@ -64,18 +64,18 @@
 <section>
 
 <div class="container reveal">
-    <h1 id="About">Hello this is what I made</h1> 
+    <h1 id="About" data-aos="zoom-out-up">Hello this is what I made</h1> 
 
     <hr>
     
     <div class="cards">
         
-        <div class="txtcard">
+        <div class="txtcard" data-aos="zoom-in-left">
            
             <h3 >title</h3>
             <p style="color: rgb(241, 255, 214);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum a ipsam cupiditate praesentium! Aut dolorum, optio asperiores culpa sed sit cum laboriosam deleniti delectus! Vitae at delectus ipsam nesciunt aspernatur quis quas ratione doloribus reiciendis animi ipsum aperiam eum nihil nostrum voluptatum, maxime quos culpa fugiat praesentium corporis beatae?</p>
         </div>
-        <div class="txtcard1">
+        <div class="txtcard1" data-aos="zoom-in-right">
             <h3>title</h3>
             <p style="color: rgb(241, 255, 214);">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio laborum a ipsam cupiditate praesentium! Aut dolorum, optio asperiores culpa sed sit cum laboriosam deleniti delectus! Vitae at delectus ipsam nesciunt aspernatur quis quas ratione doloribus reiciendis animi ipsum aperiam eum nihil nostrum voluptatum, maxime quos culpa fugiat praesentium corporis beatae?</p>
         </div>
@@ -88,7 +88,7 @@
 <section>
 
     <div class="container reveal">
-        <h2 id="Whatever">How you doing?</h2>
+        <h2 id="Whatever" data-aos="zoom-out-up">How you doing?</h2>
         <hr>
         <div class="texti">
 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus nam itaque, reiciendis, nihil et cupiditate sapiente vitae consequuntur aliquid possimus nisi quod! Pariatur fuga dignissimos consequuntur illo aliquam sit modi mollitia ipsum! Repudiandae libero dolor eius facilis laudantium perferendis, voluptates maiores eveniet? Ex necessitatibus odio doloribus quasi voluptates recusandae numquam?
@@ -106,10 +106,13 @@ Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates, ipsa possi
    
     </section>
 
+    
+
+
     <section>
 
         <div class="container reveal">
-            <h1 id="Contact">Whatever you want..</h1>
+            <h1 id="Contact" data-aos="zoom-out-up">Whatever you want..</h1>
             <hr>
             <div class="cards">
                 <div class="txtcard">
@@ -136,7 +139,7 @@ function DisplayMenu() {
         }
       }
 
-///SCROLLLREVEAL
+///SCROLLL REVEAL
 
         window.addEventListener('scroll', reveal);
 
@@ -157,21 +160,19 @@ function DisplayMenu() {
         }
 
  //SCROLLAUSHIDDEN  ///////////     
-        window.addEventListener('scroll', handleScroll);
+ window.addEventListener('scroll', handleScroll);
 
 const scrollThreshold = 300; 
-
-
 let scrollPosition = 0;
 
 function handleScroll() {
-    const topPhotos = document.querySelector('.top');
+    const subtitleElement = document.querySelector('');
     const currentScroll = window.scrollY;
 
     if (currentScroll > scrollPosition && currentScroll > scrollThreshold) {
-        topPhotos.classList.add('hidden');
+        subtitleElement.classList.add('hidden');
     } else {
-        topPhotos.classList.remove('hidden');
+        subtitleElement.classList.remove('hidden');
     }
 
     scrollPosition = currentScroll;
@@ -208,13 +209,29 @@ window.onscroll = function() {
             }
         };
 
-        // Vieritä sivu alkuun
         function scrollToTop() {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-</script
+      // Counter
+      $(document).ready(function () {
+        $('.counter').counterUp({
+          delay: 13,
+          time: 1600
+        });
+      });
+    
 
+
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+    AOS.init({
+        duration: 1000,
+    });
+  </script>
 
 </body>
 </html>

@@ -15,6 +15,11 @@ body {
 
 }
 
+.logo h1{
+    color: rgb(182, 255, 156);
+}
+
+
 /* NAVIGAATIO */
 
 .logo h1{
@@ -22,6 +27,9 @@ body {
     font-size: 35px;
     margin: 20px;
     font-family: 'monoton',cursive;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 
+    -1px -1px 3px rgba(81, 255, 0, 0.5);
+
 }
 
 .topnav {
@@ -65,6 +73,8 @@ body {
     border-radius: 50%;
     margin: 1px;
     float: left;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 
+    -1px -1px 3px rgba(81, 255, 0, 0.5);
 }
 
 
@@ -108,11 +118,18 @@ body {
 
 
 /* TOPPI*/
-
-
-.top{
-    height: 80vh;
+.top {
+    height: 750px;
+    background: linear-gradient(rgba(0,0,0, 0.2), rgba(0,0,0, 1.0)), url(./kuvat/JUNGLE.jpg); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    animation: showing 3.6s ease-in-out;
 }
+
+/*.top{
+    height: 80vh;
+}*/
 
 h3{
     font-family: 'monoton',cursive;
@@ -181,6 +198,7 @@ section .cards .txtcard{
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     
+    
 }
 
 section .cards .txtcard:hover{
@@ -222,7 +240,9 @@ section .cards .txtcard1:hover{
     opacity: 1;
 }
 
-
+.hidden {
+    display: none;
+}
 
 
 .loading-box{
@@ -243,26 +263,33 @@ section .cards .txtcard1:hover{
     justify-content: center;
     text-align: center;
     flex-wrap: nowrap;
-    margin-top: 5%;
+    margin-top: 6%;
     position: absolute;
     width: 80%;
     margin-left: 10%;
     z-index: 1;
     gap: 20px;
     
+    
 }
 
 .top-photos img{
-    width: 450px;
+    width: 300px;
     height: auto;
     opacity: 0; 
     animation: revealAndFade 4s ease forwards;
     margin-right: 30px;
     transition: opacity 2s ease-out;
+    border-radius: 10px;
+    border: 1px solid rgba(207, 254, 105, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4), 
+                0 6px 26px rgba(68, 129, 58, 0.3),
+                0 18px 42px rgba(43, 86, 56, 0.2);
 }
 
 .top-photos img:nth-child(1) {
     animation-delay: 0s;
+    
 }
 
 .top-photos img:nth-child(2) {
@@ -487,10 +514,6 @@ h2{
     /* TITLEEE */
 
 
-.title h1{
-    font-size: 80px;
-    font-weight: bold;
-}
 
 
 .title {
@@ -520,15 +543,42 @@ h2{
 }
 
 .title h1 {
+    font-family: 'urbanist', serif;
     font-size: 100px;
     font-weight: bold;
     color: white;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7), 
+    -1px -1px 3px rgba(81, 255, 0, 0.5);
 }
+
+
+h1{
+    font-family:'monoton', cursive;
+    font-size: 80px;
+    color: #ffe1a4;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7), 
+    -1px -1px 3px rgba(0, 0, 0, 0.5);
+    
+}
+
+
+h2{
+    font-family:'monoton', cursive;
+    font-size: 80px;
+    font-weight: bold;
+    color: #f1fe3a;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.7), 
+    -1px -1px 13px rgba(0, 0, 0, 0.5);
+}
+
 
 .subtitle{
     font-size: 25px;
     animation: blink 1.5s infinite ease-out;
     opacity: 1;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.7), 
+    -1px -1px 3px rgba(81, 255, 0, 0.5);
 }
 
 
@@ -574,27 +624,27 @@ h2{
 @keyframes revealAndFade {
     0% {
         opacity: 0;
-        transform: translatey(-20px); /* Aloitus hieman alhaalta */
+        transform: translatey(-20px); 
     }
     30% {
         opacity: 1;
-        transform: translateY(0); /* Nousee alkuperäiseen paikkaan */
+        transform: translateY(0); 
     }
 
     70% {
         opacity: 1;
-        transform: translateY(0); /* Pysyy paikallaan hetken aikaa */
+        transform: translateY(0); 
     }
 
     100% {
         opacity: 1;
-        transform: translateY(-20px); /* Haihtuu ja nousee hieman ylöspäin */
+        transform: translateY(-20px); 
 
     }
     
     100% {
-        opacity: 0.1;
-        transform: translateY(0); /* Haihtuu ja nousee hieman ylöspäin */
+        opacity: 0;
+        transform: translateY(0); 
         
     }
 }
@@ -663,6 +713,7 @@ p {
     justify-content: center; 
     gap: 20%; 
     margin-top: 50px;
+    z-index: 222;
 }
 
 
@@ -672,6 +723,7 @@ p {
     border-radius: 8px; 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 10px 1px 25px rgba(57, 255, 27, 0.2);
+    z-index: 222;
 }
 
 footer{
@@ -705,4 +757,32 @@ h6 {
 .up:hover {
     background-color: rgb(182, 255, 156);
     color: #000000;
+}
+
+
+
+.container.reveal {
+    position: relative;
+    padding: 20px;
+}
+
+.cards {
+    position: relative;
+    z-index: 111; 
+    padding: 20px;
+}
+
+.container.reveal::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( rgba(0,0,0, 1), rgba(0,0,0, 0.3), rgba(0,0,0, 1)), url(./kuvat/JUNGLE2.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3; 
+    z-index: 0; 
+    
 }
